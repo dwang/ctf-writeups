@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+
+<html>
+
+{% if session.bad_apple %}
+<h1>BAD APPLE!</h1>
+{% endif %}
+
+{% if session and session.inject %}
+{{ session.inject | safe }}
+{% endif %}
+</html>
